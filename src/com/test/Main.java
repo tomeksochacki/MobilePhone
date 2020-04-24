@@ -11,6 +11,7 @@ public class Main {
         System.out.println(oldPhone.weight + " " + oldPhone.price);
         phone.displayValues();
         System.out.println(phone.getParamters());
+        phone.displayValues();
     }
 
 
@@ -25,12 +26,22 @@ public MobilePhone(String weight, Integer price){
     this.price = price;
 }
 
-public void displayValues(){
-    System.out.println(this.weight + " " + this.price);
-}
 
 public String getParamters(){
     return this.weight + " " + this.price;
+}
+
+public void displayValues(){
+    System.out.println(this.weight + " " + this.price);
+}
+public Integer getPrice(){
+    return price;
+}
+public Integer getReduction(Integer reduction){
+    return price=price-reduction;
+}
+public Integer setReduction(Integer reduction){
+    return reduction = price*reduction/100;
 }
 
 }
