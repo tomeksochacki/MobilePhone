@@ -2,6 +2,7 @@ package com.test;
 
 public class Main {
     public static void main(String[] args) {
+
         MobilePhone phone = new MobilePhone("200g", 700);
         MobilePhone oldPhone = new MobilePhone("4000g", 100);
         MobilePhone mediumPhone = new MobilePhone("600g", 350);
@@ -25,6 +26,9 @@ public class Main {
         oldPhone.checkPrice();
         oldPhone.displayValues();
         System.out.println(phone.getParamters());
+        System.out.println();
+        phone.getVairableEven(3, 8);
+
     }
 
 }
@@ -57,9 +61,24 @@ public Integer setReduction(Integer reduction){
 public void checkPrice(){
     if (this.price>550){
         System.out.println("This phone is very expensive");
+    }else if (this.price <= 200){
+        System.out.println("This price is very good");
+    }else if (this.price >=350){
+        System.out.println("This price could be lower");
     }else {
-        System.out.println("This phone isn't expensive");
+        System.out.println("This is difrent");
     }
 }
 
+public void getVairableEven(int min, int max){
+
+
+
+    for (int i = min; i <=max; i++){
+        if(i%2 == 0)
+        System.out.println(i);
+        }
+    }
 }
+
+
