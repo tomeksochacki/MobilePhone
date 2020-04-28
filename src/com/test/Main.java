@@ -29,6 +29,8 @@ public class Main {
         System.out.println();
         phone.getVairableEven(3, 8);
         phone.ifDivived(4,18);
+        phone.getEvenSum(5, 9);
+        phone.numbersDecreasing(5,-2);
 
     }
 
@@ -80,12 +82,37 @@ public void getVairableEven(int min, int max){
     }
 
     public void ifDivived(int min, int max){
+    int sum = 0;
         for (int i = min; i<=max; i++){
             if (i%3 == 0 || i%5==0){
-                System.out.println("Nambers divived by 3 || 5 are: " + i);
+                System.out.println("Nambers divived by 3 || 5 are: " + i );
+
+                boolean info = i%3 == 0 || i%5 == 0;
+                System.out.println(info);
+
             }
         }
     }
+
+    public void getEvenSum(int min, int max){
+    int sum = 0;
+    for (int i = min; i<=max; i++){
+        if (i%2 == 0){
+        sum = sum + i;
+        }
+
+    }
+        System.out.println("Sum is: " + sum);
+    }
+
+    public void numbersDecreasing(int max, int min){
+    for (int i = max; i>= min; i--){
+        System.out.print(i);
+    }
+    }
+
+
+
 
 
 
