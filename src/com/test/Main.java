@@ -28,6 +28,7 @@ public class Main {
         System.out.println(phone.getParamters());
         System.out.println();
         phone.getVairableEven(3, 8);
+        phone.ifDivived(4,18);
 
     }
 
@@ -72,13 +73,22 @@ public void checkPrice(){
 
 public void getVairableEven(int min, int max){
 
-
-
     for (int i = min; i <=max; i++){
         if(i%2 == 0)
         System.out.println(i);
         }
     }
+
+    public void ifDivived(int min, int max){
+        for (int i = min; i<=max; i++){
+            if (i%3 == 0 || i%5==0){
+                System.out.println("Nambers divived by 3 || 5 are: " + i);
+            }
+        }
+    }
+
+
+
 }
 
 
